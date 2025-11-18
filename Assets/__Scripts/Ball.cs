@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     public GameObject ballSpawnerGo;
     public Vector3 startingVelocity;
+    public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,21 @@ public class Ball : MonoBehaviour
         Vector3 pos = Camera.main.WorldToViewportPoint(this.transform.position);
         if (pos.y > 1.1f || pos.y < -0.1f)
         {
+            // Set up next ball
+            BallSpawner ballSpawner;
+            ballSpawner = ballSpawnerGo.GetComponent<BallSpawner>();
+            ballSpawner.SpawnBallDelayed();
+            // Delete self
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject go = other.gameObject;
+        if (go != null && other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.transform.parent.gameObject.GetComponent<Enemy>().enemyHealth -= damage;
             // Set up next ball
             BallSpawner ballSpawner;
             ballSpawner = ballSpawnerGo.GetComponent<BallSpawner>();

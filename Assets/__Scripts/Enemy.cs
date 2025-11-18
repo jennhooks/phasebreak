@@ -1,16 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     [Header("Inscribed")]
     public float cooldownTime = 6.0f;
+    public int maxHealth = 3;
     public GameObject cannonOneGo;
     public GameObject cannonTwoGo;
+    public GameObject healthUIGo;
+    
 
-    Cannon cannonOne;
-    Cannon cannonTwo;
+    private Cannon cannonOne;
+    private Cannon cannonTwo;
+    private Text healthUI;
+    private int health;
+
+    public int enemyHealth {
+        get { return health; }
+        set {
+            if (value <= 0)
+            {
+                // Die
+                SceneManager.LoadScene("_GameOverWin");
+                Destroy(this.gameObject);
+            }
+            health = Mathf.Clamp(value, 0, maxHealth);
+            // Update interface
+            if (healthUI != null)
+                healthUI.text = $"Enemy Health:\n{health}";
+        }
+    }
 
     void RandomizeCannonAngles()
     {
@@ -30,12 +53,18 @@ public class Enemy : MonoBehaviour
         Invoke("RandomizeCannonAngles", cooldownTime);
     }
 
+    void Awake()
+    {
+        healthUI = healthUIGo.GetComponent<Text>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         cannonOne = cannonOneGo.GetComponent<Cannon>();
         cannonTwo = cannonTwoGo.GetComponent<Cannon>();
         RandomizeCannonAngles();
+        enemyHealth = maxHealth;
     }
 
     // Update is called once per frame

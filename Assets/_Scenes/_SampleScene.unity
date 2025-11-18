@@ -432,7 +432,7 @@ MonoBehaviour:
   spawnPosition: {x: -1.4, y: 3.9, z: 0}
   velocityX: 0
   velocityY: -60
-  magnitude: -80
+  magnitude: -95
   rotation: 0
 --- !u!1 &908985360
 GameObject:
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalSpeed: 10
   focusedSpeed: 5
-  maxHealth: 3
+  maxHealth: 9
   healthUIGo: {fileID: 413381606}
   speed: 20
 --- !u!1 &963194225
@@ -616,9 +616,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2763545d6ee6cbd39b67f0e7cd694c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 6
+  cooldownTime: 4
+  maxHealth: 9
   cannonOneGo: {fileID: 720950129}
   cannonTwoGo: {fileID: 1996962941}
+  healthUIGo: {fileID: 332328422}
 --- !u!1 &1039415974
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +635,7 @@ GameObject:
   - component: {fileID: 1039415975}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1574,7 +1576,7 @@ MonoBehaviour:
   spawnPosition: {x: 1.4, y: 3.9, z: 0}
   velocityX: 0
   velocityY: -60
-  magnitude: -80
+  magnitude: -95
   rotation: 0
 --- !u!1 &2026998594
 GameObject:
