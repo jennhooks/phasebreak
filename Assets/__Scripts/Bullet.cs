@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Vector3 startingVelocity = new Vector3(0, -30, 0);
+    public float magnitude = -30;
     public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         Rigidbody rb = this.GetComponent<Rigidbody>();   
-        rb.AddForce(startingVelocity);
+        rb.AddForce(this.transform.up * magnitude);
     }
 
     // Update is called once per frame
