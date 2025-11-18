@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,8 @@ public class Player : MonoBehaviour
     public float normalSpeed = 20f;
     public float focusedSpeed = 10f;
     public int maxHealth = 3;
+    public GameObject healthUIGo;
+    Text healthUI;
     
     [Header("Dynamic")]
     public float speed = 20f;
@@ -24,6 +27,9 @@ public class Player : MonoBehaviour
                 Destroy(this.gameObject);
             }
             health = Mathf.Clamp(value, 0, maxHealth);
+            // Update interface
+            if (healthUI != null)
+                healthUI.text = $"Player Health:\n{health}";
         }
     }
 
@@ -48,12 +54,12 @@ public class Player : MonoBehaviour
     {
         actions = new Controls();
         actions.Player.power.performed += OnPower;
+        healthUI = healthUIGo.GetComponent<Text>();
     }
 
     void Start()
     {
-        //playerHealth = maxHealth;
-        playerHealth = 1;
+        playerHealth = maxHealth;
     }
 
     // Update is called once per frame
