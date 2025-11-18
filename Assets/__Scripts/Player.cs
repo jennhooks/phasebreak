@@ -2,15 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     [Header("Inscribed")]
     public float normalSpeed = 20f;
     public float focusedSpeed = 10f;
-
+    public int maxHealth = 3;
+    
     [Header("Dynamic")]
     public float speed = 20f;
+    private int health;
+    public int playerHealth {
+        get { return health; }
+        set {
+            if (value <= 0)
+            {
+                // Die
+                SceneManager.LoadScene("_GameOverLoss");
+                Destroy(this.gameObject);
+            }
+            health = Mathf.Clamp(value, 0, maxHealth);
+        }
+    }
 
     Controls actions;
 
@@ -37,6 +52,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        //playerHealth = maxHealth;
+        playerHealth = 1;
     }
 
     // Update is called once per frame
