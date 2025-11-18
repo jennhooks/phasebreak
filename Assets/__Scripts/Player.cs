@@ -49,8 +49,8 @@ public class Player : MonoBehaviour
         Vector3 newPos = this.transform.position += t * speed * Time.deltaTime;
         // Clamp to avoid escaping camera.
         Vector3 clampPos = Camera.main.WorldToViewportPoint(newPos);
-        clampPos.x = Mathf.Clamp01(clampPos.x);
-        clampPos.y = Mathf.Clamp01(clampPos.y);
+        clampPos.x = Mathf.Clamp(clampPos.x, 0.35f, 0.65f);
+        clampPos.y = Mathf.Clamp(clampPos.y, 0.0f, 1.0f);
         // Update position.
         newPos = Camera.main.ViewportToWorldPoint(clampPos);
         this.transform.position = newPos;
