@@ -533,6 +533,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 4347996921788031230, guid: ead13772a520dcd61952d4330d8a690c, type: 3}
   - {fileID: 4347996921788031230, guid: c4b11745f2b65a86ea8014864154b731, type: 3}
+  - {fileID: 4347996921788031230, guid: 2b4bce63a37b4c03d9750b0a8f7687c6, type: 3}
   healthUIGo: {fileID: 332328422}
   level: 0
   levelMax: 0

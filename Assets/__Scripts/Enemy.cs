@@ -48,8 +48,10 @@ public class Enemy : MonoBehaviour
             angle *= -1;
         }
 
-        cannonOne.rotation = angle;
-        cannonTwo.rotation = angle;
+        if (cannonOne != null)
+            cannonOne.rotation = angle;
+        if (cannonTwo != null)
+            cannonTwo.rotation = angle;
 
         Invoke("RandomizeCannonAngles", cooldownTime);
     }
