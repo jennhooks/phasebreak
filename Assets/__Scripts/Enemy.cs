@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
             {
                 // Die
                 //SceneManager.LoadScene("_GameOverWin");
+                Camera.main.GetComponent<Phasebreak>().NextLevel();
                 Destroy(this.gameObject);
             }
             health = Mathf.Clamp(value, 0, maxHealth);
@@ -55,6 +56,7 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
+        healthUIGo = Camera.main.GetComponent<Phasebreak>().healthUIGo;
         healthUI = healthUIGo.GetComponent<Text>();
     }
 
