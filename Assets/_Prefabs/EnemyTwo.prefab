@@ -46,13 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 94570962147736739, guid: 85ac6006d7669b3bea6b8bdca594fc2b, type: 3}
   spawnTime: 0.333
-  cooldownTime: 2.5
+  cooldownTime: 1.25
   burstDistFactor: 0.1
-  burstCount: 3
-  spawnPosition: {x: 1.4, y: 3.9, z: 0}
+  burstCount: 1
+  spawnPosition: {x: 0.025, y: 3.9, z: 0}
   velocityX: 0
-  velocityY: -60
-  magnitude: -95
+  velocityY: -30
+  magnitude: -50
   rotation: 0
 --- !u!1 &1887336111312588783
 GameObject:
@@ -297,9 +297,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 94570962147736739, guid: 85ac6006d7669b3bea6b8bdca594fc2b, type: 3}
   spawnTime: 0.333
   cooldownTime: 2.5
-  burstDistFactor: 0.1
+  burstDistFactor: 0.25
   burstCount: 3
-  spawnPosition: {x: 1.4, y: 3.9, z: 0}
+  spawnPosition: {x: 0.5, y: 3.9, z: 0}
   velocityX: 0
   velocityY: -60
   magnitude: -95
@@ -599,9 +599,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 94570962147736739, guid: 85ac6006d7669b3bea6b8bdca594fc2b, type: 3}
   spawnTime: 0.333
   cooldownTime: 2.5
-  burstDistFactor: 0.1
+  burstDistFactor: 0.25
   burstCount: 3
-  spawnPosition: {x: -1.4, y: 3.9, z: 0}
+  spawnPosition: {x: -0.5, y: 3.9, z: 0}
   velocityX: 0
   velocityY: -60
   magnitude: -95
