@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
             if (value <= 0)
             {
                 // Die
-                SceneManager.LoadScene("_GameOverWin");
+                //SceneManager.LoadScene("_GameOverWin");
                 Destroy(this.gameObject);
             }
             health = Mathf.Clamp(value, 0, maxHealth);
