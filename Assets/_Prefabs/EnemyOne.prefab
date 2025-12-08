@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 4
-  maxHealth: 9
+  maxHealth: 6
   cannonOneGo: {fileID: 4347996922031009169}
   cannonTwoGo: {fileID: 4347996920784454301}
   healthUIGo: {fileID: 0}

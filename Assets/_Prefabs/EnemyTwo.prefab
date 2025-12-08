@@ -49,7 +49,7 @@ MonoBehaviour:
   cooldownTime: 1.25
   burstDistFactor: 0.1
   burstCount: 1
-  spawnPosition: {x: 0.025, y: 3.9, z: 0}
+  spawnPosition: {x: 0.025, y: 3.4, z: 0}
   velocityX: 0
   velocityY: -30
   magnitude: -50
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 4
-  maxHealth: 9
+  maxHealth: 6
   cannonOneGo: {fileID: 4347996922031009169}
   cannonTwoGo: {fileID: 4347996920784454301}
   healthUIGo: {fileID: 0}

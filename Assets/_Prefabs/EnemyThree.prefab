@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 4
-  maxHealth: 9
+  maxHealth: 6
   cannonOneGo: {fileID: 4347996922031009169}
   cannonTwoGo: {fileID: 4347996920784454301}
   healthUIGo: {fileID: 0}
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 94570962147736739, guid: 85ac6006d7669b3bea6b8bdca594fc2b, type: 3}
   spawnTime: 0.333
-  cooldownTime: 2.5
+  cooldownTime: 0
   burstDistFactor: 0.1
   burstCount: 3
   spawnPosition: {x: -3, y: 3.9, z: 0}
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 94570962147736739, guid: 85ac6006d7669b3bea6b8bdca594fc2b, type: 3}
   spawnTime: 0.333
-  cooldownTime: 2.5
+  cooldownTime: 0
   burstDistFactor: 0.1
   burstCount: 3
   spawnPosition: {x: 3, y: 3.9, z: 0}
